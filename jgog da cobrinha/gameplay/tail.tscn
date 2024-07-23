@@ -1,0 +1,34 @@
+[gd_scene load_steps=10 format=3 uid="uid://cf8roha5wnax5"]
+
+[ext_resource type="Script" path="res://gameplay/tail.gd" id="1_3ullg"]
+[ext_resource type="Texture2D" uid="uid://cbooilli0kfn2" path="res://gameplay/sprites/snake_graphics/Graphics/tail_left.png" id="2_smsks"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_egnam"]
+load_path = "res://.godot/imported/apple.png-a5527a56c33a8f4be3b0657a75e59287.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_aby78"]
+load_path = "res://.godot/imported/bread.png-39cedd8a26a9c307cb7df840f5ed4922.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_gr410"]
+load_path = "res://.godot/imported/broccoli.png-1b7372781695cd718fdcd5162bad7160.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_lmws0"]
+load_path = "res://.godot/imported/coconut.png-bd2ff6cd66e2ca81cbdda993ca15087b.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ik6lg"]
+load_path = "res://.godot/imported/milk.png-6ea2e9a07c5895b367ebcaeedd929911.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_0m6pl"]
+load_path = "res://.godot/imported/orange.png-3ecfdc6bf422d1941663452ed1f1514a.ctex"
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_p57dy"]
+
+[node name="Tail" type="Area2D"]
+script = ExtResource("1_3ullg")
+textures = Array[Texture]([SubResource("CompressedTexture2D_egnam"), SubResource("CompressedTexture2D_aby78"), SubResource("CompressedTexture2D_gr410"), SubResource("CompressedTexture2D_lmws0"), SubResource("CompressedTexture2D_ik6lg"), SubResource("CompressedTexture2D_0m6pl")])
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_smsks")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_p57dy")

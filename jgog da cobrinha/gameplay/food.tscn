@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://blc6x4v7478xb"]
+
+[ext_resource type="Texture2D" uid="uid://b6h44ppulkb7i" path="res://gameplay/sprites/snake_graphics/Graphics/apple.png" id="1_lhdef"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_g4yfj"]
+
+[node name="Food" type="Area2D" groups=["food"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_g4yfj")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_lhdef")
